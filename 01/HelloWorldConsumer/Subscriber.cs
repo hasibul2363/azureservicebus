@@ -35,6 +35,7 @@ namespace HelloWorldConsumer
 
         private static Task Handler(Message message, CancellationToken cancellationToken)
         {
+            Console.WriteLine($"From Event");
             var str = Encoding.UTF8.GetString(message.Body);
             var userInfo = JsonConvert.DeserializeObject<UserInfo>(str);
             Console.WriteLine($"Done for {userInfo.UserName}");

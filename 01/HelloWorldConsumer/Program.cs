@@ -10,6 +10,7 @@ namespace HelloWorldConsumer
             Console.WriteLine("Hello World!");
             Console.ReadLine();
             Listener.Listen();
+            Subscriber.Subscribe();
             Console.WriteLine("Now listening...");
             Console.ReadLine();
         }
