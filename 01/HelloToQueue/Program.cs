@@ -13,7 +13,7 @@ namespace HelloToQueue
 
             Console.WriteLine("Enter to send ");
             Console.ReadLine();
-            await MessageSender.Send(new UserInfo
+            await EventPublisher.Publish(new UserInfo
             {
                 Age = 25, Id = Guid.NewGuid(), UserName = "masud rana"
             });
